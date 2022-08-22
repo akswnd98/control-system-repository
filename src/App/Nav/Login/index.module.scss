@@ -1,0 +1,16 @@
+.root {
+  font-family: 'NotoSansKR';
+  font-size: 20px;
+  margin-left: 20px;
+  width: 80px;
+  height: 40px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+}

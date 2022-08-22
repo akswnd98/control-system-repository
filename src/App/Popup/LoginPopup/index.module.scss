@@ -1,0 +1,41 @@
+.root {
+  width: 320px;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+.show {
+  animation-name: show;
+}
+
+.hide {
+  animation-name: hide;
+}
+
+@keyframes show {
+  from {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(0, 0);
+    visibility: visible;
+  }
+  to {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(1, 1);
+    visibility: visible;
+  }
+}
+
+@keyframes hide {
+  to {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(0, 0);
+    visibility: hidden;
+  }
+}

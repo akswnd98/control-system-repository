@@ -1,0 +1,22 @@
+.root {
+  height: 100%;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .input {
+    width: 100px;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    margin-right: 8px;
+    outline: none;
+  }
+  .icon {
+    width: 28px;
+    height: 28px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
