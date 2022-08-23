@@ -1,8 +1,90 @@
 .root {
-  width: 320px;
+  z-index: 100;
+  position: fixed;
+  width: 400px;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   visibility: hidden;
+  padding-top: 40px;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 5%);
+  border-radius: 10px;
+  .marginSpace {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+    .title {
+      font-family: NotoSansKR;
+      font-size: 60px;
+      font-weight: bold;
+    }
+    .searchWrapper {
+      position: relative;
+      margin-top: 60px;
+      .search {
+        width: calc(100% - 10px);
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 5%);
+        outline-style: none;
+        padding-left: 8px;
+        font-size: 24px;
+      }
+      .enterWrapper {
+        position: absolute;
+        top: 0px;
+        right: 8px;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        .enter {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .socialLoginTitleWrapper {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      .socialLoginTitle {
+        font-size: 24px;
+        font-family: NotoSansKR;
+      }
+    }
+    .socialLoginButtons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      .socialLoginButton {
+        &:hover {
+          cursor: pointer;
+        }
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+        width: 48px;
+        height: 48px;
+      }
+      .googleLoginButton {
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 10%);
+      }
+    }
+    .signUpWrapper {
+      display: flex;
+      justify-content: right;
+      .signUp {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-family: NotoSansKR;
+        color: rgba(0, 0, 0, 50%);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 .show {
@@ -17,25 +99,28 @@
   from {
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    transform: scale(0, 0);
+    transform: translate(-50%, -50%) scale(0, 0);
     visibility: visible;
   }
   to {
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    transform: scale(1, 1);
+    transform: translate(-50%, -50%) scale(1, 1);
     visibility: visible;
   }
 }
 
 @keyframes hide {
+  from {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1, 1);
+    visibility: visible;
+  }
   to {
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    transform: scale(0, 0);
+    transform: translate(-50%, -50%) scale(0, 0);
     visibility: hidden;
   }
 }

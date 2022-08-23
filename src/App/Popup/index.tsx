@@ -8,7 +8,7 @@ function Popup () {
     <div className={styles.root}>
       {
         popupList.map((popup, key) => (
-          <div key={key}>
+          <div className={styles.popup} key={key}>
             {popup()}
           </div>
         ))
