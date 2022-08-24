@@ -1,0 +1,21 @@
+.root {
+  width: 100%;
+  .socialLoginTitleWrapper {
+    display: flex;
+    justify-content: center;
+    .socialLoginTitle {
+      font-size: 24px;
+      font-family: NotoSansKR;
+    }
+  }
+  .socialLoginButtons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .item {
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
